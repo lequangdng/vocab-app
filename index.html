@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VocabNote – Sổ từ vựng tiếng Anh</title>
+<meta name="description" content="Ứng dụng học từ vựng tiếng Anh: lưu từ, phát âm, ôn tập ngắt quãng, luyện viết tay, đồng bộ Google Drive.">
+<meta name="theme-color" content="#4f46e5">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VocabNote">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="icons/icon.svg" alt="" width="36" height="36">
+      <div><b>VocabNote</b><small>Sổ từ vựng tiếng Anh</small></div>
+    </div>
+    <nav class="nav" id="sideNav"></nav>
+    <div class="sidebar-foot">
+      <button class="btn ghost w100 hidden" id="installBtnSide">Cài ứng dụng</button>
+      <div class="side-sync hidden" id="sideFile"></div>
+      <div class="side-sync" id="sideSync"></div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <img class="top-logo" src="icons/icon.svg" alt="" width="30" height="30">
+      <h1 id="viewTitle">Sổ từ vựng</h1>
+      <div class="top-actions">
+        <button class="sync-pill hidden" id="filePill" type="button"></button>
+        <button class="sync-pill" id="syncPill" type="button"></button>
+        <button class="btn primary add-desktop" id="addBtn" type="button"></button>
+      </div>
+    </header>
+    <main id="view" tabindex="-1"></main>
+  </div>
+
+  <nav class="bottom-nav" id="bottomNav"></nav>
+  <button class="fab" id="fab" type="button" aria-label="Thêm từ mới"></button>
+</div>
+
+<dialog id="editor" class="dlg"></dialog>
+<dialog id="detail" class="dlg"></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

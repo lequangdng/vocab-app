@@ -1,0 +1,21 @@
+{
+  "name": "vocabnote",
+  "version": "1.1.0",
+  "private": true,
+  "description": "VocabNote – Sổ từ vựng tiếng Anh (web + app Android/iOS)",
+  "scripts": {
+    "build:web": "node scripts/build-web.js",
+    "android": "npm run build:web && npx cap add android && node scripts/patch-android.js && npx cap sync android",
+    "ios": "npm run build:web && npx cap add ios && node scripts/patch-ios.js && npx cap sync ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.2.1",
+    "@capacitor/core": "6.2.1",
+    "@capacitor/filesystem": "6.0.3",
+    "@capacitor/ios": "6.2.1",
+    "@codetrix-studio/capacitor-google-auth": "3.4.0-rc.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.1"
+  }
+}

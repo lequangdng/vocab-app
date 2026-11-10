@@ -1,0 +1,16 @@
+{
+  "appId": "com.vocabnote.app",
+  "appName": "VocabNote",
+  "webDir": "www",
+  "plugins": {
+    "GoogleAuth": {
+      "scopes": [
+        "profile",
+        "email",
+        "https://www.googleapis.com/auth/drive.file"
+      ],
+      "serverClientId": "",
+      "forceCodeForRefreshToken": false
+    }
+  }
+}
